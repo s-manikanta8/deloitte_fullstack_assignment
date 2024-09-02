@@ -1,0 +1,68 @@
+
+<!-- Create a web page to perform Sum operation using  JavaScript -->
+<html>
+<head></head>
+<body>
+<h3 >JavaScript Programming</h3>
+<hr/>
+product name:
+<input type="text" id="pn" />
+<br></br>
+product price :  
+<input type="text" id="t1"  />
+<br></br>
+Quantity :  
+<input type="text" id="t2"  />
+<br></br>
+<input type="button" onclick="f1()"
+			value="Get total"  />	 	
+ </br>
+<p id="p1"></p>
+
+<script>
+    var Empno = 12645;
+    var Ename = "Scott"
+    var Job = "Manager";
+    var Salary = 45000
+    console.log("Empno:"+Empno+",Ename"+Ename+",Job:"+Job+",Salary:"+Salary)
+	function  f1()
+	{
+	 let ft1 = document.getElementById("t1");
+     let ft2 = document.getElementById("t2");
+     let pr1 = document.getElementById("p1");
+     let d = 0;
+     let q = parseInt(ft2.value);
+     if (q >10)
+     {
+        d=10;
+     }
+     if (q>20)
+     {
+        d=15;
+     }
+     if( q>30)
+     {
+        d=20;
+     }
+     if (q>40)
+     {
+        d=25;
+     }
+     if(q>50)
+     {
+        d=30
+     }
+     if (q>10){
+     var disc = parseInt(q*ft1.value)/d
+     var ttl = parseInt(q*ft1.value)-parseInt(disc)}
+     else{var ttl=parseInt(q*ft1.value)}
+     pr1.innerHTML = "Total price:"+ ttl
+     pr1.style.color="blue"
+
+	 }
+</script>
+</body>
+</html>
+
+
+

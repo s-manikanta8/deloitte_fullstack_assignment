@@ -1,0 +1,55 @@
+
+<!-- Create a web page to perform Sum operation using  JavaScript -->
+<html>
+<head></head>
+<body>
+<h3 >JavaScript Programming</h3>
+<hr/>
+first number :  
+<input type="text" id="t1"  />
+<br></br>
+second number:  
+<input type="text" id="t2"  />
+<br></br>
+<input type="button" onclick="f1(event)"
+			value="sum"  />	 	
+ <input type="button" onclick="f1(event)"
+			value="sub"  />
+            <input type="button" onclick="f1(event)"
+			value="mul"  />	 	
+ <input type="button" onclick="f1(event)"
+			value="div"  />	 		
+ </br>
+<p id="p1"></p>
+
+<script>
+	function  f1(event)
+	{
+	 let ft1 = document.getElementById("t1");
+     let ft2 = document.getElementById("t2");
+     let pr1 = document.getElementById("p1");
+     let opt = event.target.value
+     let res= 0;
+     if(opt=="sum"){
+        res = parseInt(ft1.value)+parseInt(ft2.value)
+
+     }
+     if(opt=="sub"){
+        res=parseInt(ft1.value)-parseInt(ft2.value)
+     }
+     if(opt=="mul"){
+        res=parseInt(ft1.value)*parseInt(ft2.value)
+     }
+     if(opt=="div"){
+        res=parseInt(ft1.value)/ parseInt(ft2.value)
+     }
+     pr1.innerHTML = "Total price:"+ res
+     pr1.style.color="blue"
+
+	 }
+</script>
+</body>
+</html>
+
+
+
