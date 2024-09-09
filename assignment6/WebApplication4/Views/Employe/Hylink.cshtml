@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<WebApplication4.Models.Employe>
+
+@{
+    var departments = Model.Select(e => e.Department).Distinct();
+}
+
+@foreach (var department in departments)
+{
+    <a href="@Url.Action("EmployeesByDepartment", "Employe", new { department = department })">@department</a>
+    <br />
+}

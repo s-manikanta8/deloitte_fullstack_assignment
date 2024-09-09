@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3>login</h3>
+<hr />
+
+
+<form action="/Home/Login" method="post">
+    User Id :
+    <input type="number" id="t1" name="uid" />
+    <br />
+    <br />
+    Password :
+    <input type="password" id="t2" name="pwd" />
+    <br />
+    <br />
+    <input type="submit" value="Login" />
+</form>
+
+
+<p>
+    @ViewData["result"]
+</p>
